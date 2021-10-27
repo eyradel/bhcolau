@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Sidebar 01</title>
+   <meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/mdb.min.css">
+        <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+
+	<title>SVG</title>
+          <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+	<title>SVG</title>
+         <script type="text/javascript"
+    src="https://kit.fontawesome.com/2641fe0f3e.js"
+    crossorigin="anonymous"
+  ></script>
+
+         <script type="text/javascript"
+    src="https://kit.fontawesome.com/2641fe0f3e.js"
+    crossorigin="anonymous"
+  ></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+      
+            <style>
+                  
+.dark-mode {
+  background-color: #111111;
+ 
+  color: white;
+}
+            
+
+.toggle-button-section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-long-arrow-alt-left {
+  font-size: 42px;
+  margin: 0 0.5em;
+  outline: 1px solid transparent;
+  position: relative;
+  animation: left-arrow 3s infinite;
+}
+
+@keyframes left-arrow {
+  0% {
+    left: 25px;
+  }
+  50% {
+    left: 0px;
+  }
+  100% {
+    left: 25px;
+  }
+}
+
+.fa-long-arrow-alt-right {
+  font-size: 42px;
+  margin: 0 0.5em;
+  outline: 1px solid transparent;
+  position: relative;
+  animation: right-arrow 3s infinite;
+}
+
+@keyframes right-arrow {
+  0% {
+    right: 25px;
+  }
+  50% {
+    right: 0px;
+  }
+  100% {
+    right: 25px;
+  }
+}
+            
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+}
+
+.main-container {
+  padding: 30px;
+}
+
+/* HEADING */
+
+.heading {
+  text-align: center;
+}
+
+.heading__title {
+  font-weight: 600;
+}
+
+.heading__credits {
+  margin: 10px 0px;
+  color: #888888;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+
+.heading__link {
+  text-decoration: none;
+}
+
+.heading__credits .heading__link {
+  color: inherit;
+}
+
+/* CARDS */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+
+  width:450px;
+  
+  
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.card:hover {
+
+}
+
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+    
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card__icon {
+  grid-row: 2/3;
+
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 40;
+  color: #ffffff;
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+/* CARD BACKGROUNDS */
+
+.card-1 {
+  background: linear-gradient(3300deg,bisque,antiquewhite,lavender,whitesmoke);
+}
+
+.card-2 {
+  background: linear-gradient(3300deg,bisque,antiquewhite,lavender,whitesmoke);
+}
+
+.card-3 {
+  background: linear-gradient(3300deg,bisque,antiquewhite,lavender,whitesmoke);
+}
+
+.card-4 {
+  background: linear-gradient(3300deg,bisque,antiquewhite,lavender,whitesmoke);
+}
+
+.card-5 {
+   background: linear-gradient(3300deg,bisque,antiquewhite,lavender,whitesmoke);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
+  }
+}
+
+            .circle
+{
+	position: absolute;
+	top: 40%;
+	left: 47%;
+	transform: translate(-50%, -50%) scale(1.6);
+	width: 80px;
+	height: 80px;
+	border: 5px solid #fff;
+	box-shadow: 0 0 0 5px gold;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.wave
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: yellow;
+	border-radius: 160%;
+	box-shadow: inset 0 0 20px green;
+}
+.wave:before,
+.wave:after
+{
+	content: '';
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%,-75%);
+	background: #000;
+}
+.wave:before
+{
+	border-radius: 45%;
+	background: rgba(255,255,255,1);
+	animation: animate 10s linear infinite;
+}
+.wave:after
+{
+	border-radius: 40%;
+	background: rgba(255,255,255,.5);
+	animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+	0%
+	{
+		transform: translate(-50%,-70%) rotate(0deg);
+	}
+	100%
+	{
+		transform: translate(-50%,-75%) rotate(360deg);
+	}
+}
+ .far
+        {
+font-size: 15px;
+        }
+        .fa
+        {
+font-size: 15px;
+            color: black;
+        }
+            .btn
+            {
+
+            border-radius: 50px;
+            }
+#mc
+            {
+
+            width: 70%;
+                border-radius: 10px;
+                margin: auto 30px  auto;
+            
+            }
+
+</style>
+        
+  </head>
+  <bod class="">
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		<img class="img logo rounded-circle mb-" src="img/bhcapp.png" >
+	        <ul class="list-unstyled components mb-5" >
+	          <li class="active">
+                  <center>
+	           <i class="fa fa-spinner fa-spin fa-2x" style="font-size: 30px"></i></center>
+	          </li>
+	        
+	        </ul>
+
+	        
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+               
+              
+             <button class="btn" onclick="toggleThemeColor()" id="toggleThemeColor">
+      <span id="icon" class="far fa-moon "></span>
+                 
+    </button>
+
+           
+          </div>
+        </nav>
+
+          
+     
+  <br>
+   
+  
+ <div class="">
+</div>
+         <h1><center><img class="img logo rounded-circle mb-" src="img/bhcapp.png" width="220" ><br>Financial Records of BHOBUPOGA~UMaT</center></h1>  
+           
+        <br>
+               <div class="container col-sm-4 input-group">
+  
+  <input class="form-control card input-md" id="myInput" type="text" placeholder="Search your name and amount paid...........">
+        <span class="input-group-addon btn " style="border-top-right-radius: 50%;border-bottom-left-radius: 50%;"><i class="fa fa-search"></i></span>
+  <br>
+   
+  
+ 
+</div>
+      <div class="table-responsive">
+<table class="table table-stripped  container ">
+             
+    <tr>
+        
+        
+  
+  
+        <br>
+        
+        
+    </tr>
+    
+
+   <tbody id='myTable' class="">    <tr>
+    <td>Photo <p></p></td>
+    <td>Name &nbsp;<i class="fa fa-user-o"></i><p></p></td>
+    <td>Amount Paid &nbsp;<i class="fa fa-money"></i><p></p></td>
+     <td>Status &nbsp;<i class="fa fa-bell"></i><p></p></td>
+         
+    </tr>
+    
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Brako Edem Kelvin </p></td>
+    <td><p>20.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"><p></p></td>
+    <td><p>Kuwornu Eyram Dela</p></td>
+    <td><p>20.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Paulina Kafui</p></td>
+    <td><p>25.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Emmanuella Koomson</p></td>
+    <td><p>20.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Michael Collins</p></td>
+    <td><p>20.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Justice Alorsey</p></td>
+    <td><p>10.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Smoke</p></td>
+    <td><p>10.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Rosemary Baaku</p></td>
+    <td><p>10.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Yeboah Diana</p></td>
+    <td><p>10.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Ahoto Paul</p></td>
+    <td><p>10.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Akli Jonas</p></td>
+    <td><p>10.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Selasi Amegashie</p></td>
+    <td><p>10.00</p></td> 
+    <td><input type="checkbox" checked></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Fiona Kafui</p></td>
+    <td><p>10.00</p></td> 
+    <td><input type="checkbox" checked>   
+        </td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Yasmin Fugar</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Anane Deborah</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Elisha</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Naa Lartey</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Ackam Favourite</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Edem Ankutse</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Maame Aba</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td>Fafali<p></p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Norvisi Awo</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Lena</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Enam</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Cynthia</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Jonathan Kwei</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Keteku Ramson</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+    <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Emmanuella</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+    </tr>
+     <tr>    
+    <td><img src="img/icons8_user_male.ico" width="50"></td>
+    <td><p>Malaika Pathel</p></td>
+    <td><p>0.00</p></td> 
+    <td><input type="checkbox" ></td>
+       </tr></tbody>
+               
+               
+               
+               
+               
+               </table>
+        
+         
+      </div>
+        <section>  <pre>
+  <table class="table table-bordered">
+        <h1>Expenses</h1>
+    <tr>
+    <td>First General Meeting</td>
+    <td>Certificates Printout</td>
+    <td>Total</td>
+    <td>Amount left</td>
+    <td>Donations</td>
+    
+    </tr>
+     <tr>
+    <td>120</td>
+    <td>24</td>
+    <td>144</td>
+    <td>162</td>
+    <td>150</td>
+    
+    </tr>
+     <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Mr Osae (100)</td>
+    
+    </tr>
+     <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Dr Thompson (50)</td>
+    
+    </tr>
+    
+    
+    
+    
+    </table></pre></section>
+</div>
+    
+    
+	 <section>
+    
+    <pre id="pre">
+    
+    
+</pre
+    >
+  </section>
+
+  <footer>
+    <p>
+     
+      <a
+       
+        id="link"
+       
+        ></a
+      >
+    </p>
+  </footer>
+    
+    
+    
+
+    <div
+  class="modal fade"
+  id="staticBackdrop"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-mdb-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+   
+	
+      </div>
+		</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+          <script  src="js/mdb.min.js"></script>
+       <script  src="js/jquery.min.js"></script>
+       <script type="text/javascript" >
+function toggleThemeColor() {
+  var themeColor = document.body;
+  themeColor.classList.toggle("dark-mode");
+
+  var elCode = document.querySelectorAll(".code");
+  for (var i = 0; i < elCode.length; i++) {
+    elCode[i].classList.toggle("dark-code");
+  }
+
+  var elPre = document.getElementById("pre");
+  elPre.classList.toggle("dark-pre");
+
+  var elAnchor = document.getElementById("link");
+  elAnchor.classList.toggle("dark-anchor");
+
+  var icon = document.getElementById("icon");
+  icon.classList.toggle("fa-sun");
+  icon.classList.toggle("fa-moon");
+}
+
+    </script>
+      <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+  </body>
+</html>
